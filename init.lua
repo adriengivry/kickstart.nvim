@@ -610,6 +610,7 @@ require('lazy').setup({
       --  See `:help lsp-config` for information about keys and how to configure
       local servers = {
         clangd = {},
+        omnisharp = {},
         -- gopls = {},
         -- pyright = {},
         -- rust_analyzer = {},
@@ -801,15 +802,6 @@ require('lazy').setup({
 
       -- Shows a signature help window while you type arguments for a function
       signature = { enabled = true },
-    },
-  },
-
-  {
-    'seblyng/roslyn.nvim',
-    ---@module 'roslyn.config'
-    ---@type RoslynNvimConfig
-    opts = {
-      -- your configuration comes here; leave empty for default settings
     },
   },
 

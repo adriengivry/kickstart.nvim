@@ -4,5 +4,7 @@ return {
     'echasnovski/mini.nvim', -- optional, icons provider
     'nvim-tree/nvim-web-devicons', -- optional, icons provider
   },
-  opts = {}, -- see Configuration section
+  opts = {
+    buflist = {},
+  }, -- see Configuration section
 }

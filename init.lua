@@ -159,6 +159,7 @@ require('lazy').setup({
   require 'kickstart.plugins.conform',
   require 'kickstart.plugins.treesj',
   require 'kickstart.plugins.dart',
+  require 'kickstart.plugins.colorizer',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.

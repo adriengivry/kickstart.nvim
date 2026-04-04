@@ -130,6 +130,7 @@ return {
     local servers = {
       clangd = {},
       omnisharp = {},
+      codelldb = {},
       -- gopls = {},
       -- pyright = {},
       -- rust_analyzer = {},

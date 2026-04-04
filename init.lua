@@ -162,6 +162,7 @@ require('lazy').setup({
   require 'kickstart.plugins.colorizer',
   require 'kickstart.plugins.nvim-dap',
   require 'kickstart.plugins.nvim-dap-ui',
+  require 'kickstart.plugins.nvim-dap-lldb',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.

@@ -4,34 +4,6 @@ return {
   config = function()
     local dap = require 'dap'
 
-    -- codelldb adapter (installed via Mason)
-    dap.adapters.codelldb = {
-      type = 'server',
-      port = '${port}',
-      executable = {
-        command = vim.fn.stdpath 'data' .. '/mason/bin/codelldb',
-        args = { '--port', '${port}' },
-      },
-    }
-
-    -- C/C++ configurations
-    dap.configurations.cpp = {
-      {
-        name = 'Launch file',
-        type = 'codelldb',
-        request = 'launch',
-        program = function()
-          local exe = vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
-          vim.g.dap_last_executable = exe -- stash it for cwd
-          return exe
-        end,
-        cwd = function() return vim.fn.fnamemodify(vim.g.dap_last_executable or vim.fn.getcwd(), ':h') end,
-        stopOnEntry = false,
-      },
-    }
-
-    dap.configurations.c = dap.configurations.cpp
-
     -- Default keymaps, as provided by nvim-dap
     vim.keymap.set('n', '<F5>', function() dap.continue() end)
     vim.keymap.set('n', '<F10>', function() dap.step_over() end)

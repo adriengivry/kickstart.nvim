@@ -9,6 +9,7 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = false
 vim.opt.softtabstop = 2
+vim.opt.cinoptions = '(s,U1'
 -- vim.opt.smartindent = true
 
 vim.o.mouse = 'a'

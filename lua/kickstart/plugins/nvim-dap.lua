@@ -26,5 +26,8 @@ return {
     end)
     -- Custom keymaps
     vim.keymap.set({ 'n', 'v' }, '<Leader><F5>', function() dap.terminate() end)
+
+    -- Enable overseer to execute preLaunchTask and postDebugTask
+    require('overseer').enable_dap()
   end,
 }
